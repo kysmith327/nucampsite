@@ -1,7 +1,8 @@
 import React, { Component }  from 'react';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, Button, Modal, ModalHeader, ModalBody,
-    Form, FormGroup, Input, Label } from 'reactstrap';
+    Form, FormGroup, Input, Label, CardImg } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import { baseUrl } from '../shared/baseUrl';
 
 
 class Header extends Component {
@@ -75,7 +76,7 @@ class Header extends Component {
 
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
-                        <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/logo.png" height="30" width="30" alt="NuCamp Logo" /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/"><CardImg src={baseUrl + "images/logo.png"} height="30" width="30" alt="NuCamp Logo" /></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
