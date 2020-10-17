@@ -89,9 +89,9 @@ class Contact extends Component {
     }
 
     handleSubmit(values) {
-        console.log("Current state is: " + JSON.stringify(values));
-        alert("Current state is: " + JSON.stringify(values));
-        this.props.resetFeedbackForm();
+        this.props.postFeedback(values);
+       
+
     }
     render (){
         const errors = this.validate(this.state.firstName, this.state.lastName, this.state.phoneNum, this.state.email);    

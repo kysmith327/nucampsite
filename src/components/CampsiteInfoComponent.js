@@ -25,8 +25,9 @@ class CommentForm extends Component{
         });
     }
     handleSubmit(values) {
+        console.log(values);
         this.toggleModal();
-        this.props.postComment(this.props.campsiteId, values.rating, values.author, values.text);
+        this.props.postComment(this.props.campsiteId, values.rating, values.name, values.comment);
     }
     render(){
         
@@ -171,6 +172,7 @@ function CampsiteInfo(props) {
                 <div className="row">
                     <RenderCampsite campsite={props.campsite} />
                     <RenderComments comments={props.comments}
+                                    
                                     postComment={props.postComment}
                                     campsiteId={props.campsite.id} />
                 </div>
